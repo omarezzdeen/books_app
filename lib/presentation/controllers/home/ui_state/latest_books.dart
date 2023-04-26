@@ -1,13 +1,15 @@
-class LatestBooks{
+class LatestBooks {
+  String id;
   String title;
   String imageUrl;
-  double price;
-  double rating;
+  String price;
+  String subtitle;
 
-    LatestBooks({
+  LatestBooks({
+    this.id = '',
     this.title = '',
     this.imageUrl = '',
-    this.price = 0.0,
-    this.rating = 0.0,
+    this.price = '',
+    this.subtitle = '',
   });
 }

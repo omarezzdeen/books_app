@@ -1,10 +1,18 @@
 import 'package:books_app/presentation/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import 'utilities/theme/theme_manager.dart';
 
+import '../di/di.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(
+    GetMaterialApp(
+      initialBinding: MainBinding(),
+      home: const MyApp(),
+      theme: getApplicationTheme(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,10 +20,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: getApplicationTheme(),
-      home: const HomeScreen(),
+    return const Scaffold(
+      body: HomeScreen(),
     );
   }
 }

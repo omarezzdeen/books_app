@@ -1,9 +1,9 @@
+import 'package:books_app/data/datasource/remote/responses/base_responses_entity.dart';
 import 'package:books_app/utils/constants.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
 import 'responses/book_details_entity.dart';
-import 'responses/books_entity.dart';
 
 part 'api_service.g.dart';
 
@@ -11,11 +11,12 @@ part 'api_service.g.dart';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
+  @GET("new")
+  Future<BaseResponsesEntity> getBooks();
 
-  @GET("volumes")
-  Future<HttpResponse<List<BooksEntity>>> getBooks(@Query("q") String query);
+  @GET("search/{query}")
+  Future<BaseResponsesEntity> searchBooks(@Path() String query);
 
-  @GET("volumes/{id}")
-  Future<HttpResponse<BookDetailsEntity>> showBooksDetails(@Path() String id);
-
+  @GET("books/{id}")
+  Future<BookDetailsEntity> showBooksDetails(@Path() String id);
 }

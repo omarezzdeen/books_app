@@ -1,12 +1,9 @@
-import 'package:books_app/data/datasource/remote/responses/book_details_entity.dart';
-import 'package:books_app/data/datasource/remote/responses/books_entity.dart';
-import 'package:books_app/utils/data_state.dart';
+import 'package:books_app/domain/model/books.dart';
 
 abstract class ApiRepository {
+  Future<List<Books>> getAllBooks();
 
+  Future<List<Books>> searchBooks(String query);
 
-  Future<DataState<List<BooksEntity>>> getAllBooks(String query);
-
-  Future<DataState<BookDetailsEntity>> getBookDetails(String id);
-
+  Future<Books> getBookDetails(String id);
 }

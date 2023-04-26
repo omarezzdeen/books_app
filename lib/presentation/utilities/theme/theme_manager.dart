@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../values/values_manager.dart';
 import 'color_manager.dart';
 import 'font_manager.dart';
 import 'style_manager.dart';
-import '../values/values_manager.dart';
 
 ThemeData getApplicationTheme() {
   return ThemeData(
@@ -43,32 +43,32 @@ ThemeData getApplicationTheme() {
                 borderRadius: BorderRadius.circular(FontSizeManager.xSmall)))),
     // text theme
     textTheme: TextTheme(
-        // title
-        titleLarge: getBoldStyle(
-            color: ColorManager.black, fontSize: FontSizeManager.xLarge),
-        titleMedium: getMediumStyle(
-            color: ColorManager.black, fontSize: FontSizeManager.medium),
-        titleSmall: getMediumStyle(
-            color: ColorManager.black, fontSize: FontSizeManager.small),
-        // body
-        bodySmall: getRegularStyle(color: ColorManager.grey1),
-        bodyLarge: getRegularStyle(color: ColorManager.grey),
-        // display
-        displaySmall: getLightStyle(
-            color: ColorManager.black, fontSize: FontSizeManager.small),
-        displayMedium: getLightStyle(
-            color: ColorManager.black, fontSize: FontSizeManager.medium),
-        displayLarge: getLightStyle(
-            color: ColorManager.black, fontSize: FontSizeManager.xLarge),
-        // label
-        labelSmall: getRegularStyle(
-            color: ColorManager.lightGrey, fontSize: FontSizeManager.small),
-        labelMedium: getRegularStyle(
-            color: ColorManager.lightGrey, fontSize: FontSizeManager.medium),
-        labelLarge: getRegularStyle(
-            color: ColorManager.lightGrey, fontSize: FontSizeManager.large),
+      // title
+      titleLarge: getBoldStyle(
+          color: ColorManager.black, fontSize: FontSizeManager.xLarge),
+      titleMedium: getMediumStyle(
+          color: ColorManager.black, fontSize: FontSizeManager.medium),
+      titleSmall: getMediumStyle(
+          color: ColorManager.black, fontSize: FontSizeManager.small),
+      // body
+      bodyLarge: getRegularStyle(color: ColorManager.grey),
+      bodySmall: getRegularStyle(color: ColorManager.grey1),
+      // display
+      displaySmall: getLightStyle(
+          color: ColorManager.black, fontSize: FontSizeManager.small),
+      displayMedium: getLightStyle(
+          color: ColorManager.black, fontSize: FontSizeManager.medium),
+      displayLarge: getLightStyle(
+          color: ColorManager.black, fontSize: FontSizeManager.xLarge),
+      // label
+      labelSmall: getRegularStyle(
+          color: ColorManager.lightGrey, fontSize: FontSizeManager.small),
+      labelMedium: getRegularStyle(
+          color: ColorManager.lightGrey, fontSize: FontSizeManager.medium),
+      labelLarge: getRegularStyle(
+          color: ColorManager.lightGrey, fontSize: FontSizeManager.large),
 
-    // input decoration theme (text form field)
+      // input decoration theme (text form field)
     ),
     inputDecorationTheme: InputDecorationTheme(
         // content padding
