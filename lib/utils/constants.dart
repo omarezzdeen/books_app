@@ -1,5 +1,5 @@
 
 
 class Constants {
-  static const String BASE_URL = "https://www.googleapis.com/books/v1/";
+  static const String BASE_URL = "https://api.itbook.store/1.0/";
 }
